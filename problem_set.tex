@@ -1,0 +1,79 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage{geometry}
+%\usepackage[linesnumbered,lined,boxed,commentsnumbered,ruled,longend]{algorithm2e}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\newgeometry{top=20mm, bottom=15mm, right=10mm, left=10mm}
+
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyfoot{}
+\fancyhead[C]{\bf{ML and Opt Project Problem Set}}
+\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}
+\def\BState{\State\hskip-\ALG@thistlm}
+\def\bm{\begin{bmatrix}}
+\def\em{\end{bmatrix}}
+
+
+{\bf Problem 1}
+
+Which of the following are reasons for choosing the variational distribution $q(z,\beta)$ in the mean-field variational family
+\begin{itemize}
+    \item a) Simple, independent hidden variables
+    \item b) In the factorized form, the conditional distributions are in the same exponential family as the conditional distributions of the factorized form of $p(x,z,\beta|\alpha)$
+    \item c) "lead to an easy coordinate ascent algorithm"
+    \item d) computational advantages
+\end{itemize}
+
+\bigskip
+
+{\bf Problem 2}
+
+Consider the following distribution of words among two topics for a small vocabulary
+
+\medskip
+
+\begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+            & cat & dog & python & compiler & terminal\\
+    \hline
+    Topic 1 & 0.35 & 0.55 & 0.1 & 0.0 & 0.0 \\
+    \hline
+    Topic 2 & 0.05 & 0.05 & 0.4 & 0.3 & 0.2 \\
+    \hline
+\end{tabular}
+
+\medskip
+
+\begin{enumerate}
+\item What could Topic 1 reasonably represent?
+\item What could Topic 2 reasonably represent?
+\item Why is the word "python" commonly seen in both topics?
+\item Suppose there is an equal probability of each topic within a document.  What is the probability that a given word will be "python"?
+\end{enumerate}
+
+\medskip
+
+{\bf Problem 3}
+
+Suppose we are using LDA with $K$ topics, $V$ words in the vocabulary, $M$ number of documents and $N$ words in all documents.
+
+\begin{enumerate}
+    \item What is the dimension of $\phi_k$?
+    \item What is the dimension of $\theta_d$?
+    
+\end{enumerate}
+
+
+\end{document}
